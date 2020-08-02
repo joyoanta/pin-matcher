@@ -42,6 +42,7 @@ if (pinDigit == inputDigit) {
 
 document.getElementById("display-number").value = "" ;
 document.getElementById("right").style.display = "block"; 
+document.getElementById("wrong").style.display = "none";
    
 }
 
@@ -49,6 +50,12 @@ else {
 
     document.getElementById("display-number").value = "" ;
     document.getElementById("wrong").style.display = "block";  
+    document.getElementById("right").style.display = "none"; 
+
+    var tryLeft = document.getElementById("action").innerText
+    var newtryLeft = tryLeft - 1; 
+    document.getElementById("action").innerText = newtryLeft;
+    
 }
 })
 
@@ -66,5 +73,4 @@ document.getElementById("remove").addEventListener('click', function(){
     var backspace = document.getElementById("display-number")
     backspace.value =backspace.value.substring(0, backspace.value.length - 1);
     
-
 })
