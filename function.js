@@ -1,3 +1,5 @@
+// Generate Pin Button 
+
 document.getElementById("generate-pin").addEventListener('click', function(){
     let pin = Math.floor(1000 + Math.random() * 9000);
     document.getElementById("display-pin").value = pin; 
@@ -11,6 +13,8 @@ document.getElementById("generate-pin").addEventListener('click', function(){
 //     document.getElementById("display-number").value = newnumber + number;
 // })
 
+// Number Digit button 
+
     keyStroke("one");
     keyStroke("two");
     keyStroke("three");
@@ -21,6 +25,8 @@ document.getElementById("generate-pin").addEventListener('click', function(){
     keyStroke("eight");
     keyStroke("nine");
     keyStroke("zero");
+
+// Number Digit function 
 
 function keyStroke(id){
     document.getElementById(id).addEventListener("click",function(){
@@ -59,8 +65,10 @@ else {
     
 }
 
+// Button Disable 
+
 if (action.innerText < 1){
-    submitBtn.disabled = true;
+    submitBtn.disabled = true;                  
     submitBtn.style.background = '#717277';
     action.innerText = 'Sorry no more';
 }
@@ -73,7 +81,7 @@ document.getElementById("clear").addEventListener('click', function(){
     document.getElementById("display-number").value = null; 
 })
 
-// > backspace buttion 
+// > backspace button 
 
 document.getElementById("remove").addEventListener('click', function(){
 
