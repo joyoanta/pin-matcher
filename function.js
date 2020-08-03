@@ -31,9 +31,9 @@ function keyStroke(id){
     })
 }
 
-// Submit buttion 
+// submitBtn buttion 
 
-document.getElementById("submit").addEventListener('click', function(){
+document.getElementById("submitBtn").addEventListener('click', function(){
 
     let pinDigit =  document.getElementById("display-pin").value ; 
     let inputDigit = document.getElementById("display-number").value ; 
@@ -52,10 +52,17 @@ else {
     document.getElementById("wrong").style.display = "block";  
     document.getElementById("right").style.display = "none"; 
 
-    var tryLeft = document.getElementById("action").innerText
-    var newtryLeft = tryLeft - 1; 
-    document.getElementById("action").innerText = newtryLeft;
+    action.innerText--;
+    // var tryLeft = document.getElementById("action").innerText
+    // var newtryLeft = tryLeft - 1; 
+    // document.getElementById("action").innerText = newtryLeft;
     
+}
+
+if (action.innerText < 1){
+    submitBtn.disabled = true;
+    submitBtn.style.background = '#717277';
+    action.innerText = 'Sorry no more';
 }
 })
 
